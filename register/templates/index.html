@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if messages %}
+        {% for message in messages %}
+        <h3>{{ message|safe }}</h3>
+        {% endfor %}
+    {% endif %}
+
+    <div class="row">
+        <div id="left-column">
+        
+            <div class="card">
+                    
+                <form action="" method="POST" class="box" id="boxx">
+                    <h1>Formulaire de Reservation</h1>
+                    <input type="text" name="first" placeholder="Entrez votre nom">
+                    <input type="text" name="last" placeholder="Entrez votre nom">
+                    <input type="tel" name="telp" placeholder="Votre Numero de telephone">
+                    <input type="email" name="mail" placeholder="Votre mail">
+                    <textarea name="desc" id="" cols="30" rows="10" placeholder="Pourquoi Voulez vous y participer"></textarea>
+                    <input id="btn" type="submit" value="Envoyer">
+
+                    {% csrf_token %}
+
+                </form>
+            </div>
+        </div>
+
+        <div class="right-column">
+
+            <div class="card" id="max">
+                <h2>DOR'S PRODUCTION FORWARD</h2>
+                <img src="{% static 'dorsproduction.jpg' %}" alt="l'image est introuvable">
+                <p><span>A propos de: </span> DOR'S c'est une entreprise spécialisée
+                      dans le domaine de l'infographie, la réalisation de plans 
+                      et de dessins 3D 
+                    pour professionnels (2D, images animées)</p>
+
+                <h3>ACTIVITÉS</h3>
+                <ul id="list">
+                    <li>Création graphique</li>
+                    <li>Création graphique  publicitaire </li>
+                    <li>Services de l'infographie </li>
+                    <li>Formation basant  sur la création et la gestion des  bases de données</li>
+                    <li>Création dite web et réalisations  de banderoles</li>
+                    <li>Services  de traitement  de données informatiques</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
