@@ -23,6 +23,6 @@ def views_form(request):
                                   email= adress,
                                   body=why)
 
-            messages.success(request, "Merci d'avoir rerserve votre place")
+            messages.success(request, "Merci d'avoir rerserver votre place!!!")
 
     return render(request, 'index.html', {} )
