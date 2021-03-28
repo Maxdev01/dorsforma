@@ -1,0 +1,1 @@
+web: gunicorn dorsforma.wsgi --log-file -
