@@ -180,3 +180,10 @@ body {
     }
     
 }
+
+footer {
+    height: 50px;
+    background: #1e212d;
+    color: #f4f9f9;
+    text-align: center;
+}
