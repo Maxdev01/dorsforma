@@ -22,8 +22,8 @@ body {
 
 }
 .box{
-    width: 500px;
-    padding: 12px;
+    width: 420px;
+    padding: 8px;
     position: inherit;
     top: 50%;
     left: 50%;
@@ -145,6 +145,16 @@ body {
     #left-column{
         width: 100%;
         padding: 0;
+    }
+    #left-column .card {
+        padding: 0;
+        margin: 0;
+    }
+    .box {
+        width: 250px;
+        position: ;
+        left: 20px;
+        top: 2%;
     }
 
     #boxx {
